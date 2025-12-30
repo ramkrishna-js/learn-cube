@@ -1,7 +1,7 @@
 # Learn Cube 🧩
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Built with Astro](https://astro.page/badge)](https://astro.build)
+[![Built with Astro](https://img.shields.io/badge/Made_with-Astro-orange?style=flat&logo=astro)](https://astro.build)
 [![Deployment Status](https://github.com/ramkrishna-js/learn-cube/actions/workflows/deploy.yml/badge.svg)](https://github.com/ramkrishna-js/learn-cube/actions/workflows/deploy.yml)
 
 > **"Stop peeling the stickers."** 
