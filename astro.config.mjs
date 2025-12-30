@@ -32,6 +32,7 @@ export default defineConfig({
                 items: [
                     { label: 'Introduction', link: '/guides/introduction/' },
                     { label: 'Cube Notation', link: '/guides/notation/' },
+                    { label: 'How to Memorize Algs', link: '/guides/memorization/' },
                     { label: 'A Brief History', link: '/guides/history/' },
                     { label: 'Guide for Parents', link: '/guides/parents/' },
                     { label: 'The Dictionary', link: '/guides/glossary/' },
@@ -105,6 +106,8 @@ export default defineConfig({
                 items: [
                     { label: 'Your First Competition', link: '/guides/competitions/' },
                     { label: 'Competition Mindset', link: '/guides/mindset/' },
+                    { label: 'Cubing Health & Safety', link: '/guides/health/' },
+                    { label: 'Color Schemes', link: '/guides/colors/' },
                     { label: 'Hall of Fame', link: '/guides/legends/' },
                     { label: 'Solve Reconstructions', link: '/guides/recons/' },
                     { label: 'Community Resources', link: '/guides/community/' },

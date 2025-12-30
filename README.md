@@ -21,9 +21,9 @@ Most cubing tutorials are static PDFs or confusing videos. **Learn Cube** change
 
 ### 📚 Comprehensive Guides
 - **Beginner Method:** The "Daisy" and Layer-by-Layer method detailed with animations.
-- **CFOP Module:** Deep dives into F2L, OLL (2-Look & Full), and PLL.
-- **Advanced Methods:** Introductions to **Roux** (Blockbuilding) and **ZZ** (EOLine).
-- **Exotic Puzzles:** Guides for 2x2, 4x4, 5x5, Pyraminx, Megaminx, Skewb, Square-1, and Clock.
+- **CFOP Module:** Deep dives into F2L, OLL (2-Look & Full), PLL, and COLL.
+- **Advanced Methods:** Introductions to **Roux** (Blockbuilding), **ZZ** (EOLine), and **FMC**.
+- **Exotic Puzzles:** Guides for 2x2, 4x4, 5x5, Pyraminx, Megaminx, Skewb, Square-1, Clock, Mirror Blocks, Mastermorphix, Gear Cube, Ivy Cube, and Redi Cube.
 
 ### 🛠️ Interactive Tools
 | Tool | Description |
@@ -36,6 +36,7 @@ Most cubing tutorials are static PDFs or confusing videos. **Learn Cube** change
 - **Solve Reconstructions:** Analysis of sub-5 second solves.
 - **Math Theory:** Commutators, Parity, and God's Number.
 - **Blindfolded:** Complete guides for OP and M2 methods.
+- **Cubing Health:** How to avoid RSI and "Cuber's Thumb".
 
 ## 🚀 Getting Started
 
@@ -71,7 +72,7 @@ Most cubing tutorials are static PDFs or confusing videos. **Learn Cube** change
 │   │   └── docs/        # The heart of the project (MDX files)
 │   │       ├── beginner/# Beginner method tutorials
 │   │       ├── advanced/# CFOP, Roux, BLD, Theory
-│   │       ├── guides/  # Hardware, History, Culture
+│   │       ├── guides/  # Hardware, History, Culture, Health
 │   │       ├── puzzles/ # Other puzzles (Minx, Skewb, etc.)
 │   │       └── tools/   # Pages for the Timer and Quiz
 │   └── assets/          # Images and SVGs
