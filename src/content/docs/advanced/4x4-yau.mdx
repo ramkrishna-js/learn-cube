@@ -1,0 +1,45 @@
+---
+title: 4x4 Yau Method
+description: The method pros use to sub-30 the 4x4.
+sidebar:
+  order: 6.1
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+Standard Reduction is fine for beginners. But if you want to be fast, you need **Yau**.
+Named after Robert Yau, this method solves the "Cross" earlier to improve lookahead.
+
+## The Steps
+
+### 1. First Two Centers
+Solve the White and Yellow centers (Opposites).
+*   *Just like Reduction.*
+
+### 2. First 3 Cross Edges
+**This is the key difference.**
+Before solving the other 4 centers, you solve **3 of the White Cross edges**.
+*   Place them in their spots relative to the White center.
+*   *Why?* Now you have a frame of reference for the rest of the solve.
+
+### 3. Last 4 Centers
+Solve the remaining centers (Blue, Red, Green, Orange).
+*   *Benefit:* You don't need to look at the bottom (White) or top (Yellow). You can turn the outer layers freely (`u` moves) without breaking your cross edges.
+
+### 4. Last Cross Edge
+Solve the final White Cross edge and put it in place.
+*   Now your Cross is done!
+
+### 5. Edge Pairing (3-2-3 Pairing)
+Use slice moves (`Uw`) to pair up the remaining edges.
+*   Since the Cross is done, you don't look at the bottom.
+*   You only care about the top and middle layers.
+
+### 6. 3x3 Stage
+Solve as a 3x3.
+*   *Benefit:* You enter 3x3 stage with the Cross already solved. You go straight to F2L.
+
+## Why Yau?
+*   **Lookahead:** In Reduction, finding edges is chaos. In Yau, you narrow the search field.
+*   **Rotationless:** You barely rotate the cube during the center/edge stage.
+*   **Cross Transition:** You hit the 3x3 stage running.

@@ -69,6 +69,7 @@ export default defineConfig({
                             { label: 'Advanced F2L Tricks', link: '/advanced/f2l-tricks/' },
                             { label: 'OLL', link: '/advanced/cfop/oll/' },
                             { label: 'OLL Cheat Sheet', link: '/advanced/cfop/oll-groups/' },
+                            { label: 'Winter Variation (WV)', link: '/advanced/winter-variation/' },
                             { label: 'Introduction to COLL', link: '/advanced/cfop/coll/' },
                             { label: 'PLL', link: '/advanced/cfop/pll/' },
                             { label: 'Full PLL List', link: '/advanced/cfop/full-pll/' },
@@ -95,6 +96,7 @@ export default defineConfig({
                 label: 'Hardware & Care',
                 items: [
                     { label: 'The Hardware Guide', link: '/guides/hardware/' },
+                    { label: 'Lubrication Science', link: '/guides/lube-science/' },
                     { label: 'Smart Cubes', link: '/guides/smart-cubes/' },
                     { label: 'Cube Maintenance', link: '/guides/maintenance/' },
                     { label: 'DIY Modding', link: '/guides/modding/' },
@@ -126,6 +128,7 @@ export default defineConfig({
                 items: [
                      { label: '2x2 Cube', link: '/puzzles/2x2/' },
                      { label: '4x4 Cube', link: '/advanced/4x4/' },
+                     { label: '4x4 Yau Method', link: '/advanced/4x4-yau/' },
                      { label: '5x5+ Big Cubes', link: '/puzzles/big-cubes/' },
                      { label: 'Pyraminx', link: '/puzzles/pyraminx/' },
                      { label: 'Megaminx', link: '/puzzles/megaminx/' },

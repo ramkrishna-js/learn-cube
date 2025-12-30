@@ -1,0 +1,47 @@
+---
+title: Winter Variation (WV)
+description: Skip OLL like a wizard.
+sidebar:
+  order: 3.9
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+**Winter Variation (WV)** is a subset of algorithms used during the **Last Slot** of F2L.
+*   **Scenario:** You have a F2L pair made, but the corner is currently *twisted* in the top layer.
+*   **Goal:** Insert the pair AND solve the OLL (Top Face) simultaneously.
+
+## Why learn it?
+*   **Normal:** Insert Pair (3 moves) -> OLL (9 moves) -> PLL.
+*   **WV:** WV Alg (7 moves) -> PLL.
+*   **Savings:** You skip an entire step. It feels like magic.
+
+## Prerequisite
+*   You must have the **Last Pair** ready to insert.
+*   All other F2L slots must be solved.
+*   The Top Cross edges must be oriented (EO).
+
+## Common Cases (Right Slot)
+
+### 1. WV 1 (Standard Insert)
+If all top corners are already yellow.
+<Algorithm formula="U R U' R'" />
+*(This is just a normal insert).*
+
+### 2. WV 3 (Sune Shape)
+Corner facing Front.
+<Algorithm formula="U R U' R' U' R U' R'" />
+*(It looks like you are messing up, but trust the process).*
+
+### 3. WV 4 (Anti-Sune Shape)
+Corner facing Right.
+<Algorithm formula="R U R' U' R U R'" />
+*(Sexy move + Insert).*
+
+### 4. WV 5 (Headlights)
+Corners facing Front and Back.
+<Algorithm formula="R U' R' U R U2 R'" />
+
+## How to Practice
+Don't learn all 27 cases at once. Start with the easy ones (Sexy Move variants).
+Whenever you have a pair ready to insert, PAUSE. Look at the top corners. Is there an easy case?
