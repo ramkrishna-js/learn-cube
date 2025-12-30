@@ -5,6 +5,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://ramkrishna-js.github.io',
+    base: '/learn-cube',
     integrations: [starlight({
         title: 'Learn Cube',
         defaultLocale: 'root',

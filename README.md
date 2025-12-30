@@ -1,50 +1,105 @@
 # Learn Cube 🧩
 
-The ultimate open-source platform to master the Rubik's Cube. From your first solve to speedcubing world records.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Built with Astro](https://astro.page/badge)](https://astro.build)
+[![Deployment Status](https://github.com/ramkrishna-js/learn-cube/actions/workflows/deploy.yml/badge.svg)](https://github.com/ramkrishna-js/learn-cube/actions/workflows/deploy.yml)
 
-![Learn Cube Hero](./src/assets/cube-hero.svg)
+> **"Stop peeling the stickers."** 
+> The ultimate open-source platform to master the Rubik's Cube. From your first solve to speedcubing world records.
+
+---
+
+## 🌟 Why this project?
+
+Most cubing tutorials are static PDFs or confusing videos. **Learn Cube** changes that by providing:
+- **Interactive Visuals:** Don't just read "R U R' U'". *See* the arrows move.
+- **Tools Built-in:** A professional-grade Speedcube Timer and Quiz right in the browser.
+- **Culture & Context:** We don't just teach the moves; we teach the history, the slang, and the hardware.
+- **Humor:** Because memorizing 57 OLL algorithms is painful, and you need a laugh.
 
 ## ✨ Features
 
-- **Interactive Tutorials:** Step-by-step guides from beginner to advanced methods (CFOP, Roux, ZZ).
-- **Interactive Move Visualizer:** Real-time arrow diagrams for every algorithm.
-- **Speed Cube Timer:** Built-in timer with scrambler and history tracking.
-- **Puzzle Collection:** Guides for 2x2, 4x4, 5x5+, Pyraminx, Megaminx, Skewb, Square-1, and more.
-- **Cubing Culture:** History, glossaries, competition tips, and hall of fame.
-- **Hardware & Care:** Maintenance, modding, and buying guides.
-- **Parental Guide:** Helping parents understand the "clicking" obsession.
+### 📚 Comprehensive Guides
+- **Beginner Method:** The "Daisy" and Layer-by-Layer method detailed with animations.
+- **CFOP Module:** Deep dives into F2L, OLL (2-Look & Full), and PLL.
+- **Advanced Methods:** Introductions to **Roux** (Blockbuilding) and **ZZ** (EOLine).
+- **Exotic Puzzles:** Guides for 2x2, 4x4, 5x5, Pyraminx, Megaminx, Skewb, Square-1, and Clock.
 
-## 🚀 Tech Stack
+### 🛠️ Interactive Tools
+| Tool | Description |
+| :--- | :--- |
+| **Move Visualizer** | React component that renders arrow diagrams for any algorithm string. |
+| **Speed Timer** | Fully functional timer with WCA-style scrambles and history tracking. |
+| **Quiz Engine** | Test your knowledge on notation, history, and trivia. |
 
-- **Framework:** [Astro](https://astro.build)
-- **Documentation Engine:** [Starlight](https://starlight.astro.build)
-- **Components:** [React](https://reactjs.org)
-- **Styling:** CSS3 & Starlight Custom Themes
+### 🤓 Nerd Territory
+- **Solve Reconstructions:** Analysis of sub-5 second solves.
+- **Math Theory:** Commutators, Parity, and God's Number.
+- **Blindfolded:** Complete guides for OP and M2 methods.
 
-## 🛠️ Installation
+## 🚀 Getting Started
 
-```bash
-# Clone the repository
-git clone https://github.com/ramkrishna-js/learn-cube.git
+### Prerequisites
+- Node.js v18.14.1 or higher.
 
-# Install dependencies
-npm install
+### Installation
 
-# Start the development server
-npm run dev
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/ramkrishna-js/learn-cube.git
+    cd learn-cube
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run locally**
+    ```bash
+    npm run dev
+    ```
+    Open `http://localhost:4321/learn-cube` to see the site!
+
+## 📦 Project Structure
+
+```text
+/
+├── src/
+│   ├── components/      # React components (Timer, Visualizer, Quiz)
+│   ├── content/
+│   │   └── docs/        # The heart of the project (MDX files)
+│   │       ├── beginner/# Beginner method tutorials
+│   │       ├── advanced/# CFOP, Roux, BLD, Theory
+│   │       ├── guides/  # Hardware, History, Culture
+│   │       ├── puzzles/ # Other puzzles (Minx, Skewb, etc.)
+│   │       └── tools/   # Pages for the Timer and Quiz
+│   └── assets/          # Images and SVGs
+├── public/              # Static assets
+└── astro.config.mjs     # Starlight configuration
 ```
 
 ## 🤝 Contributing
 
-This is an open-source project! Whether you're a speedcubing pro or a hobbyist coder, feel free to contribute:
-- Add new algorithms or methods.
-- Improve existing tutorials.
-- Fix bugs in the tools.
-- Add more "terrible" cubing jokes.
+We welcome contributions! Whether you spot a typo in an algorithm or want to add a guide for the **Ghost Cube**, here is how:
+
+1.  Fork the Project.
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the Branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+**Note:** Please keep the tone lighthearted and fun.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🙏 Acknowledgements
+
+- **SpeedCubeDB** for being the bible of algorithms.
+- **J Perm** for teaching the world how to solve.
+- **Astro Starlight** for the amazing documentation template.
 
 ---
-*Built with ❤️ for the cubing community.*
+*Built with ❤️ (and a lot of DNF solves) by [ramkrishna-js](https://github.com/ramkrishna-js).*
