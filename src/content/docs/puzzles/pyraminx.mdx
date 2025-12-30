@@ -1,0 +1,38 @@
+---
+title: Pyraminx
+description: The triangle one.
+sidebar:
+  order: 2
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The Pyraminx is a tetrahedron. It's much easier than a 3x3 and very satisfying to turn.
+
+## Anatomy
+*   **Tips:** The 4 pointy ends. They do nothing. Just twist them to match the center next to them.
+*   **Centers:** The pieces attached to the core.
+*   **Edges:** The pieces between centers.
+
+## The Method
+
+### Step 1: The Centers
+Turn the tips to match the centers. Then, rotate the 3 layers so that all 3 centers on one face match (e.g., 3 Yellow centers).
+*   *Hint:* If you can't get all 3 on one face, you are looking at the wrong face. Pick another side.
+
+### Step 2: Insert Edges (First Layer)
+Solve the yellow edges to complete the bottom layer.
+*   Use simple logic: Move the slot up, put the edge in, move it down.
+*   `R U' R'` or `L' U L`.
+
+### Step 3: Last Layer
+You will end up with one of 5 cases.
+
+#### Case 1: The "Headlights" (2 Edges flipped)
+Two edges are in the right spot but flipped wrong.
+<Algorithm formula="R U R' U' R U R' U'" />
+*(Right Down, Top Right, Right Up, Top Left... repeat).*
+
+#### Case 2: The Cycle (3 Edges need to rotate)
+One face is solved, the others look like eyes.
+<Algorithm formula="R U' R' U' R U' R'" />

@@ -1,0 +1,85 @@
+---
+title: Last Layer (Complete)
+description: Every pattern you might see on the yellow face.
+sidebar:
+  order: 4
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The Last Layer is where beginners get most confused because the patterns look complex. Don't worry, there are only a few distinct states.
+
+## Step 1: Yellow Cross (3 Patterns)
+Ignore the corners. Look only at the Yellow Edges.
+
+### 1. The Dot
+Only the center is yellow.
+<Algorithm formula="F R U R' U' F'" />
+*Result: Now you have the "L".*
+
+### 2. The "L" Shape
+Two edges make a small L. **Hold it in the Back-Left.**
+<Algorithm formula="F U R U' R' F'" />
+*Result: The Cross.*
+
+### 3. The Line
+A horizontal line.
+<Algorithm formula="F R U R' U' F'" />
+*Result: The Cross.*
+
+---
+
+## Step 2: Cross Edges (2 Patterns)
+Rotate the top layer to match the side colors of the cross edges.
+
+### 1. Two Adjacent Match (Back & Right)
+Common case.
+<Algorithm formula="R U R' U R U2 R' U" />
+
+### 2. Two Opposite Match (Front & Back)
+Perform the algorithm once from anywhere.
+<Algorithm formula="R U R' U R U2 R' U" />
+*Result: Now two adjacent will match. Re-align and do it again.*
+
+---
+
+## Step 3: Corner Position (2 Patterns)
+Check if corners are in the correct slot (colors match centers), even if twisted.
+
+### 1. None Correct
+Do the algorithm from anywhere.
+<Algorithm formula="U R U' L' U R' U' L" />
+
+### 2. One Correct
+Hold it in **Front-Right**. Do the algorithm.
+<Algorithm formula="U R U' L' U R' U' L" />
+*(Repeat if necessary).*
+
+---
+
+## Step 4: Twist Corners (7 Patterns)
+You will see one of these shapes. The solution is ALWAYS the same: **`R' D' R D`**.
+*   **Crucial:** Do not rotate the cube. Use `U` moves to bring the next corner to Front-Right.
+
+### 1. Sune (Fish)
+One corner solved, 3 twisted counter-clockwise.
+
+### 2. Anti-Sune (Fish)
+One corner solved, 3 twisted clockwise.
+
+### 3. Headlights
+Two corners facing front.
+
+### 4. Chameleon
+Two corners facing away (sides).
+
+### 5. Bowtie
+Two diagonal corners solved, two wrong.
+
+### 6. Car (H)
+Two facing front, two facing back.
+
+### 7. Blinker (Pi)
+Two facing front, two facing sides.
+
+**Just remember:** Pick an unsolved corner (Front-Right), do `R' D' R D` until yellow is up, turn Top (`U`), repeat.

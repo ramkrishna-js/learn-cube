@@ -1,0 +1,38 @@
+---
+title: Introduction to Roux
+description: The block-building alternative.
+sidebar:
+  order: 1
+---
+
+import { Algorithm } from '../../../../components/MoveVisualizer.tsx';
+
+**Roux** relies less on algorithms and more on freedom of movement. It uses the `M` slice (middle layer) heavily.
+
+## The 4 Steps
+
+### 1. First Block (FB)
+Build a 1x2x3 block on the **Left** side.
+*   Totally intuitive.
+*   You can use the M-slice and U-layer freely.
+
+### 2. Second Block (SB)
+Build a 1x2x3 block on the **Right** side.
+*   Now the Left and Right sides are solved.
+*   The `M` slice and `U` layer are still free to move.
+
+### 3. CMLL (Corners of Last Layer)
+Solve the 4 corners of the top layer in one step (Orientation + Permutation).
+*   There are 42 algorithms (similar to OLL/PLL but focused on corners).
+*   Beginners can use 2-Look CMLL (Orient then Permute).
+
+### 4. LSE (Last Six Edges)
+Solve the remaining 6 edges (4 on top, 2 on bottom) using only `M` and `U` moves.
+1.  **Orientation:** Flip bad edges so they can be solved.
+2.  **UL/UR:** Place the left and right edges.
+3.  **Last 4:** Solve the remaining centers and edges.
+
+## Why Roux?
+*   **Efficiency:** Average move count is ~48 moves (vs ~60 for CFOP).
+*   **Lookahead:** Since you track fewer pieces (blocks instead of cross+pairs), it can be easier to plan ahead.
+*   **Table Abuse:** Not great for one-handed, but amazing for two-handed solving.

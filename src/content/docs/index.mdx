@@ -1,0 +1,43 @@
+---
+title: Master the Cube
+description: The open-source platform to master the Rubik's Cube.
+template: splash
+hero:
+  tagline: From your first solve to speedcubing world records. The ultimate open-source guide.
+  image:
+    file: ../../assets/cube-hero.svg
+  actions:
+    - text: Start Learning
+      link: /guides/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/ramkrishna-js/learn-cube
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Algorithm } from '../../components/MoveVisualizer.tsx';
+
+## Quick Preview: The "Sexy Move"
+
+One of the most common triggers in cubing. Try following these moves!
+
+<Algorithm formula="R U R' U'" />
+
+## Choose your path
+
+<CardGrid stagger>
+	<Card title="Beginner Method" icon="star">
+		Just starting out? Learn the layer-by-layer method to solve your first cube.
+	</Card>
+	<Card title="CFOP (Fridrich)" icon="rocket">
+		The most popular speedcubing method. Learn F2L, OLL, and PLL.
+	</Card>
+	<Card title="Roux Method" icon="puzzle">
+		An intuitive block-building method with fewer moves.
+	</Card>
+	<Card title="Notation Guide" icon="open-book">
+		Understand what R, U', and F2 mean in algorithm guides.
+	</Card>
+</CardGrid>

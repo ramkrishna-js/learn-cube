@@ -1,0 +1,50 @@
+---
+title: First Layer (Complete)
+description: Every possible case for the white corners.
+sidebar:
+  order: 2
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+You are looking for White Corners in the **Top Layer**. Here is every possible scenario you will face.
+
+## Top Layer Cases
+The corner is in the yellow layer, ready to be solved. Position it above its target slot.
+
+### Case 1: White Faces Right
+The easiest case.
+<Algorithm formula="R U R'" />
+
+### Case 2: White Faces Front
+Also easy.
+<Algorithm formula="U' R' U' R" />
+*(Or use the Left hand: `L' U' L`)*
+
+### Case 3: White Faces Up
+The "Sky" case. We need to fix it first.
+<Algorithm formula="R U2 R' U' R U R'" />
+*(This turns it into Case 1).*
+
+## Bottom Layer Cases (The "Stuck" Ones)
+The corner is already in the first layer, but it's wrong.
+
+### Case 4: Twisted in Place
+It's in the right slot, but the white sticker is not on the bottom.
+*   **Fix:** We must "pop" it out to the top layer first.
+<Algorithm formula="R U R' U'" />
+*   Now it is in the top layer (Case 1 or 2). Solve normally.
+
+### Case 5: Stuck in Wrong Slot
+It's in the bottom layer, but between the wrong centers (e.g., Red/Blue corner is in the Blue/Orange slot).
+*   **Fix:** Pop it out.
+<Algorithm formula="R U R'" />
+*   Now move it to the correct slot and solve.
+
+## Summary Checklist
+1.  **Scan Top Layer.** Is there a white corner?
+    *   **Yes:** Move it above its home. Check if White faces Right, Front, or Up.
+    *   **No:** Look at the Bottom Layer.
+2.  **Scan Bottom Layer.** Is there a stuck corner?
+    *   **Yes:** Do `R U R'` to bring it to the top.
+    *   **No:** You are done!

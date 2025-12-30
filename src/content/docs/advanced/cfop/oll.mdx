@@ -1,0 +1,36 @@
+---
+title: OLL (Orientation)
+description: Orienting the Last Layer (Making it all yellow).
+sidebar:
+  order: 3
+---
+
+import { Algorithm } from '../../../../components/MoveVisualizer.tsx';
+
+**OLL** makes the entire top face Yellow. It doesn't matter if the side colors match yet.
+
+## 2-Look OLL
+
+Instead of learning 57 algorithms, beginners should learn "2-Look OLL":
+1.  **Edge Orientation:** Make the Yellow Cross (same as Beginner Method).
+2.  **Corner Orientation:** Twist the corners to be yellow.
+
+### Step 1: The Cross
+Use `F R U R' U' F'` (Line) or `F U R U' R' F'` (L-shape) to get the cross.
+
+### Step 2: The Corners (7 Cases)
+Once you have the cross, there are only 7 possible corner patterns. Here are the most common two ("Sune" and "Anti-Sune").
+
+#### Sune (Fish shape, correct corner at front-left)
+<Algorithm formula="R U R' U R U2 R'" />
+
+#### Anti-Sune (Fish shape, correct corner at back-right)
+<Algorithm formula="R U2 R' U' R U' R'" />
+
+#### Headlights (Two yellow stickers facing front)
+<Algorithm formula="R2 D R' U2 R D' R' U2 R'" />
+
+#### Chameleon (Two yellow stickers facing out sides)
+<Algorithm formula="r U R' U' r' F R F'" />
+
+*(Note: `r` means turn the right two layers).*

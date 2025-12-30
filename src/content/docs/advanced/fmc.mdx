@@ -1,0 +1,39 @@
+---
+title: FMC (Fewest Moves Challenge)
+description: The chess match of cubing.
+sidebar:
+  order: 4
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+Most events are about **Time**. FMC is about **Efficiency**.
+You are given a scramble and **1 hour**. You must find the shortest solution possible.
+
+## The Rules
+*   You get paper, pencils, and 3 cubes.
+*   You write down your solution in notation.
+*   Result = Total number of moves. (World Class is < 25 moves).
+
+## Basic Techniques
+
+### 1. Blockbuilding (Petrus/Heise style)
+CFOP is inefficient (usually 60 moves).
+In FMC, we build blocks.
+*   **2x2x2 Block:** Solve a corner and its 3 surrounding edges.
+*   **2x2x3 Block:** Expand it.
+*   This is far more efficient than Cross + F2L.
+
+### 2. NISS (Normal Inverse Scramble Switch)
+This is dark magic.
+*   If the scramble is bad, you can solve the **Inverse Scramble** (the scramble played backwards).
+*   Why? A solution to the inverse scramble is just the inverse of the normal solution.
+*   You can switch between Normal and Inverse scrambles mid-solve to find better block continuations.
+
+### 3. Insertions
+You solve the cube *except* for 3 corners (a "Skeleton").
+Then, you go back inside your solution and insert a **Commutator** at the exact right moment to solve those corners, canceling out moves.
+
+## Example of Efficiency
+*   **CFOP Solver:** `R U R' U'` (4 moves) to pair.
+*   **FMC Solver:** Uses the scramble's pre-existing blocks to solve the pair in 1 move.

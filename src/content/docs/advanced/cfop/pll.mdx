@@ -1,0 +1,48 @@
+---
+title: PLL (Permutation)
+description: Permuting the Last Layer (Solving the cube).
+sidebar:
+  order: 4
+---
+
+import { Algorithm } from '../../../../components/MoveVisualizer.tsx';
+
+**PLL** moves the pieces around to their correct spots while keeping them yellow facing up.
+
+## 2-Look PLL
+
+We break this into two steps:
+1.  **Corners:** Put all corners in the right place.
+2.  **Edges:** Put all edges in the right place.
+
+### Step 1: Corners
+Look for "Headlights" (two same-colored corner stickers on one side).
+*   **If you have headlights:** Put them at the **Back** and do the **T-Perm** (or A-Perm).
+*   **If no headlights:** Do the **Y-Perm** (or T-Perm from anywhere).
+
+#### T-Perm (The most useful algo!)
+<Algorithm formula="R U R' U' R' F R2 U' R' U' R U R' F'" />
+
+### Step 2: Edges
+Now only edges are swapped.
+
+#### Ua-Perm (Cycle 3 edges clockwise)
+One edge is solved (put at Back).
+
+<Algorithm formula="R U' R U R U R U' R' U' R2" />
+
+#### Ub-Perm (Cycle 3 edges counter-clockwise)
+One edge is solved (put at Back).
+
+<Algorithm formula="R2 U R U R' U' R' U' R' U R'" />
+
+#### H-Perm (Swap Opposite Edges)
+All edges are wrong.
+
+<Algorithm formula="M2 U M2 U2 M2 U M2" />
+
+#### Z-Perm (Swap Adjacent Edges)
+
+<Algorithm formula="M2 U M2 U M' U2 M2 U2 M'" />
+
+*(Note: `M` is the middle slice turn).*

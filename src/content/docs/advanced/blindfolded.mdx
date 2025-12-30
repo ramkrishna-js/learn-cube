@@ -1,0 +1,37 @@
+---
+title: Blindfolded (BLD)
+description: No, we don't peek.
+sidebar:
+  order: 5
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+Solving a cube blindfolded (3BLD) is the ultimate party trick. It looks like magic, but it's actually just a memory palace and specific algorithms.
+
+## How it works
+You don't memorize "move right, move left". You memorize **where pieces need to go**.
+
+1.  **Memorization Phase:** You look at the cube and create a story.
+    *   *Example:* The White/Red edge belongs in the "A" spot, and the Blue/Orange edge belongs in the "F" spot.
+    *   *Story:* "Ants eating Fries."
+2.  **Blindfold Phase:** You put on the blindfold and execute algorithms to swap those specific pieces without messing up the rest of the cube.
+
+## The Buffer & Target Concept
+
+Imagine you have a "Buffer" spot (like a loading dock).
+1.  You look at the piece currently sitting in the Buffer.
+2.  You shoot it to its "Target" home using a setup move and an algorithm (like the **T-Perm** or **Y-Perm**).
+3.  Now a new piece is in the Buffer. Repeat.
+
+## Old Pochmann Method (OP)
+This is the beginner BLD method.
+*   **Edges:** Use **T-Perm** (`R U R' U' R' F R2 U' R' U' R U R' F'`) to swap pieces.
+*   **Corners:** Use **Y-Perm** to swap corners.
+
+## Is it hard?
+*   **Solving:** Surprisingly easy. It's just repeating 2 algorithms.
+*   **Memorizing:** This is the hard part. You need to memorize a sequence of about 20 letters.
+
+## Don't Peek!
+If you lift the blindfold, it's a DNF. Even if you just wanted to check if the cat was judging you. (The cat is always judging you).

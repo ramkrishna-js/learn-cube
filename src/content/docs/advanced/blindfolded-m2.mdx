@@ -1,0 +1,42 @@
+---
+title: Advanced Blindfolded (M2)
+description: The method for solving edges blindfolded faster.
+sidebar:
+  order: 6
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The **Old Pochmann (OP)** method is great for beginners, but swapping pieces with T-Perms (14 moves) is slow.
+Enter **M2**. It solves edges in just... 1 move. (Well, mostly).
+
+## The Concept
+*   **Buffer:** DF (Down-Front).
+*   **Target:** Wherever the piece belongs.
+*   **The Move:** `M2`.
+    *   `M2` swaps the DF (Buffer) with the UB (Up-Back) position.
+
+## How it works
+1.  **Setup:** Move your target piece to the **UB** position.
+2.  **Swap:** Do `M2`.
+3.  **Undo Setup:** Move the piece back.
+
+*Example:* To shoot to the **UF** (Up-Front) sticker.
+*   **Setup:** `U2` (Moves UF to UB).
+*   **Swap:** `M2`.
+*   **Undo:** `U2`.
+*   *Full Alg:* `U2 M2 U2`.
+
+## Special Cases
+The M-slice pieces are tricky because `M2` moves them.
+*   **FU (Front-Up):** `F E R U R' E' R U' R' F' M2` (Just memorize it).
+*   **BD (Back-Down):** `M2 D R' U R' U' M' U R U' M R D'`.
+
+## Parity
+If you have an odd number of edge targets, you have Parity.
+*   **Fix:** After finishing edges, do `D' L2 D M2 D' L2 D`. Then solve corners.
+
+## Why learn M2?
+*   It reduces execution time by ~50%.
+*   It flows much better (less lockups).
+*   It's the stepping stone to **3-Style** (the method World Record holders use).

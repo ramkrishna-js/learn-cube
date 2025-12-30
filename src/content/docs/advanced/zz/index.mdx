@@ -1,0 +1,34 @@
+---
+title: Introduction to ZZ
+description: The Edge Orientation method.
+sidebar:
+  order: 1
+---
+
+import { Algorithm } from '../../../../components/MoveVisualizer.tsx';
+
+**ZZ (Zbigniew Zborowski)** is the third "Big" method. It is famous for being **Rotationless** (no `x`, `y`, or `z` turns).
+
+## The Philosophy
+In CFOP, you rotate the cube constantly to find F2L pairs. In ZZ, we fix all the "Bad Edges" at the very beginning so we *never* have to rotate.
+
+## The Steps
+
+### 1. EOLine (Edge Orientation + Line)
+This is the hardest part.
+1.  **EO:** Identify all "Bad Edges" (edges that would require a rotation to solve). Flip them using `F` or `B` moves.
+2.  **Line:** Solve the Front-Bottom and Back-Bottom edges to create a line.
+*   *Result:* The cube can now be solved using only **R, U, L, D** moves. No rotations!
+
+### 2. ZZF2L (F2L)
+Solve the Left and Right 1x2x3 blocks.
+*   Because all edges are oriented, you just turn L/U/R. No cube rotations needed. It flows incredibly fast.
+
+### 3. ZBLL (Last Layer)
+Since edges are already oriented (from Step 1), you skip the "Cross" step of OLL.
+*   You can use standard OLL/PLL.
+*   Or learn **ZBLL** (493 algorithms) to solve the entire last layer in ONE step.
+
+## Pros & Cons
+*   **Pros:** Zero rotations, great for One-Handed, very efficient.
+*   **Cons:** EOLine is very hard to inspect in 15 seconds.

@@ -1,0 +1,48 @@
+---
+title: The Math of the Cube
+description: Group Theory, God's Number, and Commutators.
+sidebar:
+  order: 12
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+Warning: This page contains math. If you just want to go fast, turn back now. If you want to understand *why* the algorithms work, stay.
+
+## How many combinations?
+A 3x3 cube has **43,252,003,274,489,856,000** possible positions.
+*   That is 43 quintillion.
+*   If you had 43 quintillion cubes, you could cover the surface of the Earth 275 times.
+
+## God's Number
+What is the maximum number of moves required to solve ANY scramble?
+*   For years, people thought it was 52, then 42, then 30.
+*   In 2010, Google computers proved it: **20 moves**.
+*   This means *every* state can be solved in 20 moves or less (Half-Turn Metric).
+
+## Commutators (The Secret Sauce)
+Most advanced algorithms are built using **Commutators**.
+A commutator is a sequence in the form: `A B A' B'`
+
+### Why do they work?
+Imagine you have a solved cube.
+1.  **A:** You make a change (e.g., twist a corner). This "breaks" other things.
+2.  **B:** You move that corner away and replace it with another corner.
+3.  **A':** You undo the first move. This "fixes" the broken things, but now applies the reverse twist to the new corner.
+4.  **B':** You undo the second move.
+
+*Result:* Only those two corners are affected. Everything else is solved.
+
+### Example: Corner Cycle
+Try this: `(R U R') D (R U' R') D'`
+*   **A:** `R U R'` (Inserts a corner)
+*   **B:** `D` (Moves the bottom layer)
+*   **A':** `R U' R'` (Undoes the insertion)
+*   **B':** `D'` (Undoes the bottom move)
+
+This cycles 3 corners without messing up the rest of the cube. This is the basis of **Blindfolded Solving**.
+
+## Parity (The Math Error)
+Parity isn't a glitch; it's a mathematical property.
+*   **Even Cubes (4x4):** You can swap two edges without swapping corners. This is impossible on a 3x3 because of the way permutations work (even vs odd permutations).
+*   On a 3x3, every turn swaps a set of corners AND a set of edges. You cannot swap just two pieces.

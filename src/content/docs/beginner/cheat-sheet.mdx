@@ -1,0 +1,28 @@
+---
+title: Beginner Cheat Sheet
+description: All algorithms on one page. Print this out!
+sidebar:
+  order: 5
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+## 1. White Cross
+*   **Daisy:** Yellow center, white petals -> Move to bottom.
+*   **Flipped Edge:** `F' U L' U'`
+
+## 2. First Layer Corners
+*   **Right:** `R U R'`
+*   **Front:** `U' R' U' R`
+*   **Up:** `R U2 R' U' R U R'`
+
+## 3. Second Layer Edges
+*   **Right:** `U R U' R' U' F' U F`
+*   **Left:** `U' L' U L U F U' F'`
+
+## 4. Last Layer
+*   **Cross (Dot/Line):** `F R U R' U' F'`
+*   **Cross (L-Shape):** `F U R U' R' F'`
+*   **Match Edges:** `R U R' U R U2 R' U`
+*   **Position Corners:** `U R U' L' U R' U' L`
+*   **Twist Corners:** `R' D' R D` (Repeat!)

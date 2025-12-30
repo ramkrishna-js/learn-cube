@@ -1,0 +1,43 @@
+---
+title: Skewb
+description: It turns around the corners?
+sidebar:
+  order: 4
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The Skewb is weird. It is a corner-turning puzzle. When you turn a corner, half the cube moves.
+
+## Notation
+*   **R:** Turn the bottom-right corner (and everything attached) down/back.
+*   **r:** Turn the bottom-right corner up/forward.
+*   **L:** Turn the bottom-left corner down/back.
+
+## The Sledgehammer
+This is the **One Algorithm to Rule Them All**. Master this move.
+
+<Algorithm formula="R' F R F'" />
+
+*(Right down, Left down, Right up, Left up).*
+
+## The Method
+
+### Step 1: First Face
+Pick a color (e.g., White) and get all 4 corners to point up.
+*   This is intuitive. Just twist them until they match.
+
+### Step 2: Yellow Center
+Flip the cube over. The Yellow center is likely somewhere on the sides.
+*   Hold the cube so the Yellow center is at the **Back**.
+*   Perform: **Sledgehammer x 2**.
+*   *Result:* Yellow center is now on top.
+
+### Step 3: Yellow Corners
+Now orient the yellow corners.
+*   **Headlights:** Hold headlights on the **Right**. Sledgehammer x 2.
+*   **Chameleon:** Hold eyes on the **Front**. Sledgehammer x 2.
+
+### Step 4: The H-Perm (Center Swap)
+If you have 4 centers wrong (Top/Front and Left/Right need swapping).
+*   Algorithm: `Sledgehammer` -> `y2` (rotate 180) -> `Sledgehammer`.

@@ -1,0 +1,44 @@
+---
+title: Megaminx
+description: The 12-sided monster.
+sidebar:
+  order: 3
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The Megaminx is a dodecahedron (12 faces). It looks terrifying, but here is the secret: **It is just a 3x3.**
+
+## The Concept
+If you can solve a 3x3, you can solve 95% of a Megaminx.
+*   **Centers:** Fixed (just like 3x3).
+*   **Edges:** Have 2 colors (just like 3x3).
+*   **Corners:** Have 3 colors (just like 3x3).
+
+## The Steps
+
+### 1. The Star (Cross)
+Instead of a White Cross (4 edges), you build a **White Star** (5 edges).
+*   *Strategy:* Same as 3x3. Find the white edges and match them to their centers.
+
+### 2. First Layer Corners (F2L)
+Insert the 5 white corners.
+*   *Strategy:* Same as 3x3 (`R U R'`).
+
+### 3. Second Layer Edges
+This is where it gets long. You need to solve the edges above the white corners.
+*   *Strategy:* Use standard 3x3 edge insertion (`U R U' R' U' F' U F`).
+
+### 4. S2L (Second 2 Layers)
+Now you have a "Star" pattern on the bottom. You need to build "Mega-F2L" for every other color around the equator.
+*   **Process:** Pick a color (e.g., Red). Build its "Star" legs, then insert its corners/edges. Move to the next color (Blue).
+*   *Tip:* Order matters! Go in a circle (Red -> Blue -> Yellow -> Purple -> Green).
+
+### 5. Last Layer (Grey Face)
+Now you have one face left (usually Grey).
+1.  **Edge Orientation:** Make a Grey Star. (`F R U R' U' F'`).
+2.  **Corner Orientation:** Twist corners to be Grey. (`R U R' U R U2 R'`).
+3.  **Permutation:** Swap pieces to finish.
+
+## Why is it hard?
+It's not hard; it's **endurance**. A 3x3 speedsolve takes 10 seconds. A Megaminx speedsolve takes 1 minute. It requires lookahead and stamina.

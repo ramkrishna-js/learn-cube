@@ -1,0 +1,30 @@
+---
+title: Introduction to COLL
+description: Saving time on the Last Layer.
+sidebar:
+  order: 3.8
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+**COLL (Corners of Last Layer)** is a subset of OLL.
+*   **Prerequisite:** All Edges are already oriented (The Cross is solved).
+*   **Goal:** Solve the Top Corners (Orientation) AND their Permutation (Placement) at the same time.
+
+## Why learn it?
+*   **Normal OLL:** Orients corners -> Leaves you with ANY of the 21 PLLs (including the bad ones like G-Perms).
+*   **COLL:** Orients corners + Permutes them -> Leaves you with only **EPLL** (Edge Permutation Last Layer).
+    *   EPLLs are the fastest PLLs: **U-Perm, H-Perm, Z-Perm**.
+    *   Result: You guarantee an easy finish.
+
+## Recognition
+You recognize COLL by looking at the "Headlights" or matching colors on the top layer *before* you do the alg.
+
+## Example: The "H" Case
+(Top has Cross, two headlights front, two headlights back).
+*   **Standard OLL:** `R U R' U R U' R' U R U2 R'` -> Gives random PLL.
+*   **COLL (Columns Case):** If the front two corners have the same side colors...
+    *   Alg: `R U R' U R U L' U R' U' L`
+    *   Result: Solved corners. You skip corner PLL.
+
+There are about 40 COLL algorithms. It is a great step after you master full CFOP.

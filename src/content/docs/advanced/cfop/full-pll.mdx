@@ -1,0 +1,79 @@
+---
+title: Full PLL List
+description: All 21 permutations to finish the cube.
+sidebar:
+  order: 5
+---
+
+import { Algorithm } from '../../../../components/MoveVisualizer.tsx';
+
+Once you master 2-Look PLL, you will want to learn the full 21 algorithms to solve the Last Layer in one step.
+
+## Edges Only (4)
+
+**Ua-Perm** (Cycle Clockwise)
+<Algorithm formula="M2 U M U2 M' U M2" />
+
+**Ub-Perm** (Cycle Counter-Clockwise)
+<Algorithm formula="M2 U' M U2 M' U' M2" />
+
+**H-Perm** (Opposite Swap)
+<Algorithm formula="M2 U M2 U2 M2 U M2" />
+
+**Z-Perm** (Adjacent Swap)
+<Algorithm formula="M' U M2 U M2 U M' U2 M2" />
+
+## Corners Only (3)
+
+**Aa-Perm** (Headlights Back)
+<Algorithm formula="x R' U R' D2 R U' R' D2 R2" />
+
+**Ab-Perm** (Headlights Right)
+<Algorithm formula="x R2 D2 R U R' D2 R U' R" />
+
+**E-Perm** (No Headlights)
+<Algorithm formula="x' R U' R' D R U R' D' R U R' D R U' R' D'" />
+
+## Corner + Edge Swaps (14)
+
+**T-Perm** (The Classic)
+<Algorithm formula="R U R' U' R' F R2 U' R' U' R U R' F'" />
+
+**Y-Perm** (Diagonal Swap)
+<Algorithm formula="F R U' R' U' R U R' F' R U R' U' R' F R F'" />
+
+**Jb-Perm** (The "L" on Right)
+<Algorithm formula="R U R' F' R U R' U' R' F R2 U' R' U'" />
+
+**Ja-Perm** (The "L" on Left)
+<Algorithm formula="L' U' L F L' U' L U L F' L2 U L U" />
+
+**Ra-Perm**
+<Algorithm formula="R U' R' U' R U R D R' U' R D' R' U2 R'" />
+
+**Rb-Perm**
+<Algorithm formula="R' U2 R U2 R' F R U R' U' R' F' R2" />
+
+**F-Perm**
+<Algorithm formula="R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R" />
+
+**V-Perm**
+<Algorithm formula="R' U R' U' y R' F' R2 U' R' U R' F R F" />
+
+**Na-Perm**
+<Algorithm formula="R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'" />
+
+**Nb-Perm**
+<Algorithm formula="R' U R U' R' F' U' F R U R' F R' F' R U' R" />
+
+**Ga-Perm**
+<Algorithm formula="R2 U R' U R' U' R U' R2 U' D R' U R D'" />
+
+**Gb-Perm**
+<Algorithm formula="R' U' R U D' R2 U R' U R U' R U' R2 D" />
+
+**Gc-Perm**
+<Algorithm formula="R2 U' R U' R U R' U R2 U D' R U' R' D" />
+
+**Gd-Perm**
+<Algorithm formula="R U R' U' D R2 U' R U' R' U R' U R2 D'" />

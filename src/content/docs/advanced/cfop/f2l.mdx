@@ -1,0 +1,59 @@
+---
+title: F2L (First 2 Layers)
+description: Solving the first two layers simultaneously.
+sidebar:
+  order: 2
+---
+
+import { Algorithm } from '../../../../components/MoveVisualizer.tsx';
+
+In the beginner method, we solved the white corners, then the middle edges. In **F2L**, we solve both at the same time by creating a "Pair" and inserting it into the slot.
+
+## The Logic: Split & Pair
+
+The core skill of F2L is not memorizing algorithms. It is **intuitive manipulation**.
+You have two pieces (Corner + Edge). You want them to be stuck together correctly, then dropped into their home.
+
+### The "Splitting" Technique
+Often, your pieces are stuck together incorrectly (e.g., checking board pattern).
+To fix this, you must **"Hide the Corner"**.
+
+1.  Move the corner to the bottom layer (temporarily).
+2.  While it's hidden, the top layer is free to spin!
+3.  Move the edge piece to a better spot.
+4.  Bring the corner back up.
+
+:::tip[Golden Rule]
+Never hide a piece if it breaks a "Solved Pair" or your "Cross". Only hide using "Empty Slots" (slots that aren't solved yet).
+:::
+
+## The 3 Fundamental Cases
+
+Most F2L cases reduce to one of these three scenarios.
+
+### Case 1: Easy Pair (Different Colors on Top)
+The corner and edge are touching or near each other, and the top colors are different.
+*   **Goal:** Pull them together to form a block.
+
+<Algorithm formula="R U R'" />
+
+### Case 2: Split Pair (Same Colors on Top)
+The corner and edge have the same color facing up.
+*   **Goal:** You want them to be **far apart** on the top layer.
+*   **Action:** Hide corner -> Move edge away -> Restore corner.
+
+<Algorithm formula="R U2 R' U' R U R'" />
+
+### Case 3: White Sticker Facing Up
+The corner has white facing up. This is annoying.
+*   **Goal:** Knock the white sticker to the side.
+*   **Action:** Align edge with center -> Turn side to hide edge -> Move corner on top of edge -> Restore side.
+
+<Algorithm formula="R U2 R' U' R U R'" />
+
+## Pro Tip: Lookahead
+The secret to F2L speed isn't turning fast. It's **never stopping**.
+While your hands are solving Pair #1, your eyes should NOT be watching Pair #1. They should be hunting for **Pair #2**.
+
+*   Don't watch what you are doing. Trust your muscle memory.
+*   Scan the top layer for the next Red/Blue edge while solving Orange/Green.

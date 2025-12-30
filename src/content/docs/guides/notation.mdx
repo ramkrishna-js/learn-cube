@@ -1,0 +1,79 @@
+---
+title: Cube Notation
+description: Learn how to read Rubik's Cube algorithms.
+sidebar:
+  order: 2
+---
+
+import MoveVisualizer, { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+To follow the guides, you need to understand **Cube Notation**. Each letter refers to a face of the cube and how to turn it.
+
+## Basic Turns
+
+Imagine you are holding the cube facing you.
+
+| Move | Description | Visual |
+| :--- | :--- | :--- |
+| **R** | Right Face Clockwise (Up) | <MoveVisualizer move="R" /> |
+| **L** | Left Face Clockwise (Down) | <MoveVisualizer move="L" /> |
+| **U** | Top Face Clockwise (Left) | <MoveVisualizer move="U" /> |
+| **D** | Bottom Face Clockwise (Right) | <MoveVisualizer move="D" /> |
+| **F** | Front Face Clockwise | <MoveVisualizer move="F" /> |
+| **B** | Back Face Clockwise | <MoveVisualizer move="B" /> |
+
+## Prime (Counter-Clockwise)
+
+If you see an apostrophe `'` (e.g., `R'`), it means **Prime** or **Counter-Clockwise**.
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+  <MoveVisualizer move="R'" />
+  <MoveVisualizer move="L'" />
+  <MoveVisualizer move="U'" />
+  <MoveVisualizer move="D'" />
+  <MoveVisualizer move="F'" />
+  <MoveVisualizer move="B'" />
+</div>
+
+## Double Turns
+
+If you see a number `2` (e.g., `U2`), it means turn that face **twice** (180 degrees).
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+  <MoveVisualizer move="R2" />
+  <MoveVisualizer move="U2" />
+</div>
+
+## Advanced Notation
+
+As you get faster, you will encounter these moves.
+
+### Slice Moves (Middle Layers)
+These move the layers *between* the outer faces.
+*   **M (Middle):** Follows `L` direction (Down). *Used heavily in Roux.*
+*   **E (Equator):** Follows `D` direction (Right).
+*   **S (Standing):** Follows `F` direction (Clockwise).
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+  <MoveVisualizer move="M" />
+  <MoveVisualizer move="M'" />
+</div>
+
+### Wide Moves (Two Layers)
+If you see a lowercase letter (e.g., `r`) or a `w` (e.g., `Rw`), it means turn **two layers** at once.
+*   **r (or Rw):** Turn Right inner + outer layers together.
+*   **u (or Uw):** Turn Top inner + outer layers together.
+
+### Cube Rotations
+These don't turn any layers; they turn the **entire cube** in your hands.
+*   **x:** Rotate cube on X-axis (like `R`). White top -> Yellow top.
+*   **y:** Rotate cube on Y-axis (like `U`). Green front -> Red front.
+*   **z:** Rotate cube on Z-axis (like `F`). Green front -> Red top.
+
+## Example Algorithm
+
+Try this sequence on a solved cube. This is a very common "trigger" move called the **Sexy Move**.
+
+<Algorithm formula="R U R' U'" />
+
+**Challenge:** Repeat this sequence 6 times, and your cube will return to its solved state!

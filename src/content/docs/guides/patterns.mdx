@@ -1,0 +1,49 @@
+---
+title: Fun Patterns
+description: Impress your friends without actually solving it.
+sidebar:
+  order: 3
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+So you've solved the cube. Now what? You put it on the shelf? No! You make it look cool.
+
+Here are some patterns that make it look like you're a wizard, even if you just memorized a string of letters.
+
+## The Checkerboard
+The classic. The "I just learned this 5 minutes ago" pattern. It looks complex but is ridiculously simple.
+
+<Algorithm formula="M2 E2 S2" />
+
+*(Wait, what are M, E, S? Just turn the middle slices twice in every direction. Or do `R2 L2 U2 D2 F2 B2` if you want a workout.)*
+
+## Cube in a Cube
+This one melts brains. It looks like a corner twisted in on itself.
+
+<Algorithm formula="U' L' U' F' R2 B' R F U B2 U B' L U' F U R F'" />
+
+**Pro Tip:** Do it 3 times to get back to solved (or just cry and resolve it normally).
+
+## Cube in a Cube in a Cube
+Yo dawg, I heard you like cubes. So I put a cube in your cube in your... you get it.
+
+<Algorithm formula="U' L' U' F' R2 B' R F U B2 U B' L U' F U R F'" />
+*(Note: This is the same as above. To get the 3rd level, you usually need a 4x4 or 5x5. On a 3x3, it just looks really cool.)*
+
+## The Superflip
+This is mathematically the "most scrambled" state possible (20 moves away from solved). Every single edge piece is in the correct place, but flipped upside down. It's beautiful chaos.
+
+<Algorithm formula="U R2 F B R B2 R U2 L B2 R U' D' R2 F R' L B2 U2 F2" />
+
+## Anaconda
+A snake winding around the cube.
+
+<Algorithm formula="L U B' U' R L' B R' F B' D R D' F'" />
+
+## Six Spots
+Also known as "The Donut". Centers are swapped.
+
+<Algorithm formula="U D' R L' F B' U D'" />
+
+(Or just `M E M' E'` if you want to be fancy).

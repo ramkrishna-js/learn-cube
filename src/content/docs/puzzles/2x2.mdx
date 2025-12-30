@@ -1,0 +1,38 @@
+---
+title: 2x2 Cube (Pocket Cube)
+description: Small but spicy.
+sidebar:
+  order: 1
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The 2x2 might look easy, but it can be tricky. It's essentially a 3x3 without edges or centers—just corners.
+
+## The Method: Ortega
+Professional 2x2 solvers use the **Ortega Method**. It has 3 steps.
+
+### Step 1: Face Building
+Build one solid face (e.g., White) at the bottom.
+*   **Note:** Unlike 3x3, the side colors *don't* need to match yet! Just get all white stickers on the bottom.
+
+### Step 2: OLL (Orient Last Layer)
+Make the top face (Yellow) solid.
+*   You use the same algorithms as 3x3 corner orientation (Sune, Anti-Sune, Headlights, etc.).
+
+### Step 3: PBL (Permute Both Layers)
+This is the magic of Ortega. We solve the side colors of *both* the top and bottom layers at the same time.
+
+#### Case 1: Bar on Bottom, Bar on Top
+You have two solved adjacent pieces (a "bar") on the bottom layer and on the top layer.
+*   Hold bars at the **Back**.
+<Algorithm formula="R2 U' B2 U2 R2 U' R2" />
+
+#### Case 2: No Bars (Diagonal Swap)
+No side colors match on top or bottom.
+<Algorithm formula="R2 F2 R2" />
+
+#### Case 3: Bar on Bottom, No Bar on Top
+<Algorithm formula="R U' R F2 R' U R'" />
+
+*(There are 5 PBL algorithms total, but these cover most cases).*

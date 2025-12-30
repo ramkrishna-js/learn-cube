@@ -1,0 +1,54 @@
+---
+title: The White Cross
+description: The first step of solving the cube.
+sidebar:
+  order: 1
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+The **White Cross** is the foundation of your solve. The goal is to form a white cross on the bottom face (usually white) where the edge pieces match the center colors of the adjacent faces.
+
+:::tip[Goal]
+You want 4 white edges surrounding the white center.
+**Crucial:** The side colors of these edges MUST match the center pieces of the side faces (Blue, Red, Green, Orange).
+:::
+
+## The Concept: "Daisy" Method
+
+For beginners, it is easiest to start with the **Daisy**. Instead of solving the white cross directly on the white face, we build it on the **Yellow** face first.
+
+### Step 1: Make a Daisy
+Ignore the side colors for a moment. Just get 4 white edge stickers surrounding the yellow center.
+1. Look for white edge pieces in the middle layer.
+2. Rotate the face to bring them up to the yellow face.
+3. If an edge is flipped, move it to the side, then bring it up.
+
+*Result: A yellow center with 4 white "petals".*
+
+### Step 2: Match and Turn
+Now we transfer the petals to the white face correctly.
+
+1.  Look at the **side color** of one white petal (e.g., Red).
+2.  Rotate the top layer (`U`) until that red sticker aligns with the **Red Center**.
+3.  Turn that face 180 degrees (`F2` or `R2` etc.) to bring the white edge down to the white face.
+4.  Repeat for all 4 petals.
+
+## Common Cases
+
+### Case 1: The "Good" Edge
+The white sticker is facing you on the bottom layer.
+
+<Algorithm formula="F2" />
+
+### Case 2: The "Flipped" Edge
+The edge is in the right spot but the white sticker is not facing the white center.
+
+<Algorithm formula="F' U L' U'" />
+
+## Check Your Work
+Flip your cube over to look at the white face.
+*   Do you have a cross?
+*   Do the side colors match the centers (e.g. White/Blue edge touches Blue center)?
+
+If yes, congratulations! Move on to the [First Layer](/beginner/first-layer/).

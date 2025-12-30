@@ -1,0 +1,38 @@
+---
+title: 4x4 Cube (The Revenge)
+description: Twice the pieces, double the trouble.
+sidebar:
+  order: 6
+---
+
+The 4x4 (Rubik's Revenge) is the big brother of the 3x3. It has no fixed centers, which introduces a world of pain called "Parity".
+
+## The Method: Reduction (Yau)
+
+We don't solve it layer-by-layer. We turn it into a 3x3 first.
+
+### Step 1: Centers
+Since centers move, you must build them.
+*   **Goal:** Create 6 solid colored squares in the middle.
+*   **Rule:** You must memorize the color order (White opposite Yellow, Blue opposite Green, Red opposite Orange). If you get this wrong, the cube becomes unsolvable.
+
+### Step 2: Edge Pairing
+The 4x4 has two pieces for every single edge.
+*   **Goal:** Find matching pairs (e.g., two Red-Blue pieces) and join them together.
+*   **Result:** You now have 12 "Big Edges".
+
+### Step 3: 3x3 Stage
+Now treat the 2x2 blocks as corners, the paired edges as single edges, and the 2x2 centers as single centers. Solve it exactly like a 3x3!
+
+## The Boss Fight: Parity
+Sometimes, the 3x3 stage is impossible. This is **Parity**. It happens because hidden internal pieces are swapped.
+
+### OLL Parity (Flipped Edge)
+One single edge group is flipped upside down. Impossible on a 3x3.
+*   **The Algo:** `Rw U2 x Rw U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'`
+*   *Translation:* Spin the inner layers until your hands hurt.
+
+### PLL Parity (Swapped Edges)
+Two edges are swapped, but corners are solved.
+*   **The Algo:** `r2 U2 r2 Uw2 r2 Uw2`
+*   *Translation:* Much easier. Just slice and spin.

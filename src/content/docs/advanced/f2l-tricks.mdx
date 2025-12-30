@@ -1,0 +1,37 @@
+---
+title: Tricky F2L Cases
+description: How to solve the annoying ones efficiently.
+sidebar:
+  order: 2.5
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+You know the basics. But what about when pieces are stuck, glued together, or just mocking you?
+
+## 1. Connected but Wrong
+The corner and edge are touching, but the colors don't match. (e.g., White faces side, Edge is flipped).
+*   **The Beginner way:** Separate them (`R U R'`), then solve. (6-8 moves).
+*   **The Pro way:**
+    *   If piece is on Right: `R' F R F' R U' R'` (Sledgehammer + Insert).
+    *   *Result:* Solved in fewer moves and flips edges!
+
+## 2. Corner in Slot, Edge in Top
+The corner is already solved! But the edge is floating on top.
+*   **Keyhole:** `D` (move slot away) -> `R U' R'` (insert edge) -> `D'` (return).
+*   **Algorithm:** `U' R U R' U2 R U' R'`
+
+## 3. Edge in Slot, Corner in Top
+The edge is solved! But the corner is floating.
+*   **Algorithm:** `R U R' U' R U R' U' R U R'` (Triple Sexy Move).
+    *   *Why?* It cycles the corner in without breaking the edge.
+
+## 4. Both in Wrong Slots
+*   **Scenario:** The Red/Blue pair is stuck in the Orange/Green slot.
+*   **Don't:** Take them out, rotate, put them in.
+*   **Do:** Solve the *Orange/Green* pair into that slot. It will naturally eject the Red/Blue pair. Two birds, one stone.
+
+## 5. "Safe" Hiding
+When hiding a corner to pair it, make sure you hide it in a "Safe" direction.
+*   **Rule:** Hide it *away* from the edge you are moving.
+*   If Edge is at Back-Left, don't hide Corner at Back-Left.

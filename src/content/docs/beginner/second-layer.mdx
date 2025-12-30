@@ -1,0 +1,40 @@
+---
+title: Second Layer (Complete)
+description: All edge scenarios explained.
+sidebar:
+  order: 3
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+You are looking for edges in the **Top Layer** that have **NO Yellow**.
+
+## Top Layer Cases
+The edge is in the top layer. You have matched the front color to the center (making a "T").
+
+### Case 1: Moves to the Right
+The top sticker matches the Right center.
+<Algorithm formula="U R U' R' U' F' U F" />
+
+### Case 2: Moves to the Left
+The top sticker matches the Left center.
+<Algorithm formula="U' L' U L U F U' F'" />
+
+## The "Stuck" Cases
+There are no good edges in the top layer, but the second layer is not done.
+
+### Case 3: Flipped in Place
+The edge is in the right spot, but backwards.
+*   **Fix:** We must replace it with a "dummy" yellow edge to pop it out.
+*   Perform the **Right Algorithm** once:
+<Algorithm formula="U R U' R' U' F' U F" />
+*   Now the piece is in the top layer. Solve it correctly.
+
+### Case 4: Stuck in Wrong Slot
+The edge is in the middle layer, but in the wrong home.
+*   **Fix:** Same as above. Perform the **Right Algorithm** to pop it out.
+*   Then move it to its correct home.
+
+:::tip[Visual Cue]
+If you can't find any non-yellow edges on top, look at the sides. You will see a piece that looks "trapped". You have to "evict" it!
+:::
