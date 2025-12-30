@@ -61,6 +61,7 @@ export default defineConfig({
                 label: 'Speedcubing Methods',
                 items: [
                     { label: 'Overview', link: '/advanced/intro/' },
+                    {
                         label: 'CFOP Method',
                         items: [
                             { label: 'Introduction', link: '/advanced/cfop/' },
@@ -143,8 +144,11 @@ export default defineConfig({
                      { label: 'Mirror Blocks', link: '/puzzles/mirror-blocks/' },
                      { label: 'Ghost Cube', link: '/puzzles/ghost-cube/' },
                      { label: 'Mastermorphix', link: '/puzzles/mastermorphix/' },
-
-
+                     { label: 'Gear Cube', link: '/puzzles/gear-cube/' },
+                     { label: 'Ivy Cube', link: '/puzzles/ivy-cube/' },
+                     { label: 'Redi Cube', link: '/puzzles/redi-cube/' },
+                ]
+            }
         ],
         customCss: [
             './src/styles/custom.css',
