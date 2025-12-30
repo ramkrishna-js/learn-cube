@@ -109,6 +109,8 @@ export default defineConfig({
                     { label: 'Your First Competition', link: '/guides/competitions/' },
                     { label: 'Competition Mindset', link: '/guides/mindset/' },
                     { label: 'Cubing Health & Safety', link: '/guides/health/' },
+                    { label: 'The Stages of Addiction', link: '/guides/addiction/' },
+                    { label: 'Cubing Myths Busted', link: '/guides/myths/' },
                     { label: 'Color Schemes', link: '/guides/colors/' },
                     { label: 'Hall of Fame', link: '/guides/legends/' },
                     { label: 'Solve Reconstructions', link: '/guides/recons/' },
@@ -126,6 +128,7 @@ export default defineConfig({
             {
                 label: 'Puzzle Collection',
                 items: [
+                     { label: '1x1 Cube', link: '/puzzles/1x1/' },
                      { label: '2x2 Cube', link: '/puzzles/2x2/' },
                      { label: '4x4 Cube', link: '/advanced/4x4/' },
                      { label: '4x4 Yau Method', link: '/advanced/4x4-yau/' },
