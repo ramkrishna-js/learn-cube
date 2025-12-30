@@ -130,6 +130,10 @@ export default defineConfig({
                      { label: 'Square-1', link: '/puzzles/square-1/' },
                      { label: 'Rubik\'s Clock', link: '/puzzles/clock/' },
                      { label: 'Mirror Blocks', link: '/puzzles/mirror-blocks/' },
+                     { label: 'Mastermorphix', link: '/puzzles/mastermorphix/' },
+                     { label: 'Gear Cube', link: '/puzzles/gear-cube/' },
+                     { label: 'Ivy Cube', link: '/puzzles/ivy-cube/' },
+                     { label: 'Redi Cube', link: '/puzzles/redi-cube/' },
                 ]
             }
         ],
