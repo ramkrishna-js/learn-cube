@@ -21,9 +21,10 @@ Most cubing tutorials are static PDFs or confusing videos. **Learn Cube** change
 
 ### 📚 Comprehensive Guides
 - **Beginner Method:** The "Daisy" and Layer-by-Layer method detailed with animations.
-- **CFOP Module:** Deep dives into F2L, OLL (2-Look & Full), PLL, and COLL.
-- **Advanced Methods:** Introductions to **Roux** (Blockbuilding), **ZZ** (EOLine), and **FMC**.
-- **Exotic Puzzles:** Guides for 2x2, 4x4, 5x5, Pyraminx, Megaminx, Skewb, Square-1, Clock, Mirror Blocks, Mastermorphix, Gear Cube, Ivy Cube, and Redi Cube.
+- **CFOP Module:** Deep dives into Advanced Cross, F2L, OLL (2-Look & Full), PLL, COLL, and Winter Variation.
+- **Advanced Methods:** Introductions to **Roux**, **ZZ**, **FMC**, and Subset Theory (ZBLL).
+- **Exotic Puzzles:** Guides for 15+ puzzles including the **Ghost Cube**, Square-1, and Clock.
+- **Culture:** Histories of banned events (Feet Solving), legends, and addiction stages.
 
 ### 🛠️ Interactive Tools
 | Tool | Description |
@@ -82,7 +83,7 @@ Most cubing tutorials are static PDFs or confusing videos. **Learn Cube** change
 
 ## 🤝 Contributing
 
-We welcome contributions! Whether you spot a typo in an algorithm or want to add a guide for the **Ghost Cube**, here is how:
+We welcome contributions! Whether you spot a typo in an algorithm or want to add a guide for the **Gigaminx**, here is how:
 
 1.  Fork the Project.
 2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`).

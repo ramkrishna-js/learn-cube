@@ -1,0 +1,35 @@
+---
+title: Advanced Cross
+description: Solving the cross in under 8 moves.
+sidebar:
+  order: 2.1
+---
+
+import { Algorithm } from '../../../components/MoveVisualizer.tsx';
+
+Beginners solve the cross piece-by-piece. Pros solve the cross as a **system**.
+The WCA limit for inspection is 15 seconds. You should use ALL of it to plan your cross.
+
+## 1. Relative Order
+You don't need to match the centers immediately.
+*   *Scenario:* You have Blue on Front. You put the Red edge on the Left and Orange on the Right.
+*   *Fix:* Just do a `D2` at the end.
+*   **Rule:** Know your color order (Blue is opposite Green, Red opposite Orange). As long as they are correct *relative to each other*, you can align them at the very end.
+
+## 2. "Bad" vs "Good" Edges
+*   **Good Edge:** Can be solved with just `R` or `L` moves into the bottom.
+*   **Bad Edge:** Requires `F` or `B` moves (which are slow).
+*   **Strategy:** Use the solution of one edge to turn a "Bad" edge into a "Good" one.
+
+## 3. Fingertricks
+*   Avoid rotations (`y`) during Cross.
+*   Use your left index push for `U'` or right index push for `U` to align the D-layer if needed.
+*   Use "Thumb" moves for `F` turns.
+
+## Example
+Scramble: `R U R' F'` (Assume White top, Green front).
+*   **Beginner:** "Where is Green? Okay put it in. Where is Red? Rotate. Put it in."
+*   **Advanced:** "I see Green is good. Red is bad. If I move Green (`R`), Red becomes good (`F`)."
+
+## The Benchmark
+If your cross takes more than **8 moves**, you missed a better solution. (Average optimized cross is ~6 moves).

@@ -61,18 +61,19 @@ export default defineConfig({
                 label: 'Speedcubing Methods',
                 items: [
                     { label: 'Overview', link: '/advanced/intro/' },
-                    {
                         label: 'CFOP Method',
                         items: [
                             { label: 'Introduction', link: '/advanced/cfop/' },
+                            { label: 'Advanced Cross', link: '/advanced/advanced-cross/' },
                             { label: 'F2L', link: '/advanced/cfop/f2l/' },
                             { label: 'Advanced F2L Tricks', link: '/advanced/f2l-tricks/' },
+                            { label: 'Winter Variation (WV)', link: '/advanced/winter-variation/' },
                             { label: 'OLL', link: '/advanced/cfop/oll/' },
                             { label: 'OLL Cheat Sheet', link: '/advanced/cfop/oll-groups/' },
-                            { label: 'Winter Variation (WV)', link: '/advanced/winter-variation/' },
                             { label: 'Introduction to COLL', link: '/advanced/cfop/coll/' },
                             { label: 'PLL', link: '/advanced/cfop/pll/' },
                             { label: 'Full PLL List', link: '/advanced/cfop/full-pll/' },
+                            { label: 'Algorithm Subsets (ZBLL)', link: '/advanced/subsets/' },
                         ]
                     },
                     {
@@ -109,6 +110,7 @@ export default defineConfig({
                     { label: 'Your First Competition', link: '/guides/competitions/' },
                     { label: 'Competition Mindset', link: '/guides/mindset/' },
                     { label: 'Cubing Health & Safety', link: '/guides/health/' },
+                    { label: 'With Feet (RIP)', link: '/guides/feet-solving/' },
                     { label: 'The Stages of Addiction', link: '/guides/addiction/' },
                     { label: 'Cubing Myths Busted', link: '/guides/myths/' },
                     { label: 'Color Schemes', link: '/guides/colors/' },
@@ -139,12 +141,10 @@ export default defineConfig({
                      { label: 'Square-1', link: '/puzzles/square-1/' },
                      { label: 'Rubik\'s Clock', link: '/puzzles/clock/' },
                      { label: 'Mirror Blocks', link: '/puzzles/mirror-blocks/' },
+                     { label: 'Ghost Cube', link: '/puzzles/ghost-cube/' },
                      { label: 'Mastermorphix', link: '/puzzles/mastermorphix/' },
-                     { label: 'Gear Cube', link: '/puzzles/gear-cube/' },
-                     { label: 'Ivy Cube', link: '/puzzles/ivy-cube/' },
-                     { label: 'Redi Cube', link: '/puzzles/redi-cube/' },
-                ]
-            }
+
+
         ],
         customCss: [
             './src/styles/custom.css',
