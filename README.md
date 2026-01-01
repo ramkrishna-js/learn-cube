@@ -104,4 +104,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - **Astro Starlight** for the amazing documentation template.
 
 ---
-*Built with ❤️ (and a lot of DNF solves) by [ramkrishna-js](https://github.com/ramkrishna-js).*
+Built with ❤️ (and a lot of DNF solves) by [ramkrishna-js](https://github.com/ramkrishna-js).
